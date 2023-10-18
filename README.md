@@ -13,8 +13,12 @@ TGS_PBO_A_4519210045_SarahThesalonicaSogen
 ![Screenshot (570)](https://github.com/Gensaaa25/TGS_PBO_A_4519210045_SarahThesalonicaSogen/assets/148388380/f620de76-a15d-4573-87bc-dadb29440761)
 ![Screenshot (571)](https://github.com/Gensaaa25/TGS_PBO_A_4519210045_SarahThesalonicaSogen/assets/148388380/f03a28f4-ced5-4288-9c23-43237dd9e4a3)
 
-
-
-
-
-
+## Hasil Running Matrix - Penjumlahan
+![Screenshot (572)](https://github.com/Gensaaa25/TGS_PBO_A_4519210045_SarahThesalonicaSogen/assets/148388380/98b87b75-8bf2-4ecc-b0d0-fe6f7ca28409)
+## Hasil Running Matrix - Pengurangan
+![Screenshot (573)](https://github.com/Gensaaa25/TGS_PBO_A_4519210045_SarahThesalonicaSogen/assets/148388380/5de3dc69-9988-419b-ab0b-83a2673d278b)
+## Hasil Running Matrix - Invers
+![Screenshot (574)](https://github.com/Gensaaa25/TGS_PBO_A_4519210045_SarahThesalonicaSogen/assets/148388380/3acb398f-2106-4763-a9a5-6cd601c8e154)
+![Screenshot (575)](https://github.com/Gensaaa25/TGS_PBO_A_4519210045_SarahThesalonicaSogen/assets/148388380/e09155d2-a06a-4fe6-9908-001ff582795d)
+## Hasil Running Matrix - Transpose
+![Screenshot (576)](https://github.com/Gensaaa25/TGS_PBO_A_4519210045_SarahThesalonicaSogen/assets/148388380/860e612f-d368-429c-afff-103afe14f628)
