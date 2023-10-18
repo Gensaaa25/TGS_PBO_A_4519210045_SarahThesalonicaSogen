@@ -1,0 +1,171 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
+public class Matrix {
+    private static Object scan;
+
+    public static void main(String[] args) throws IOException {
+        int opsi, temp;
+        int i,j,m,n;
+        int matrix1[][] = new int[10][10];
+        int matrix2[][] = new int[10][10];
+        int transpose[][] = new int[10][10];
+        int hasil[][] = new int[10][10];
+
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println(" OPSI : \n 1. Penjumlahan \n 2. Pengurangan \n 3. Invers \n 4. Transpose ");
+        System.out.println(" Pilih Opsi(1/2/3/4) : ");
+        opsi = keyboard.nextInt();
+        System.out.println(" ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ");
+
+        switch (opsi) {
+            case 1:
+                Scanner scan = new Scanner(System.in);
+                System.out.println(" Masukkan baris matrix : ");
+                m = scan.nextInt();
+                System.out.println(" Masukkan kolom matrix : ");
+                n = scan.nextInt();
+
+                System.out.println(" Masukkan elemen matriks pertama : ");
+                for (i = 0; i < m; i++) {
+                    for (j = 0; j < n; j++) {
+                        matrix1[i][j] = scan.nextInt();
+                    }
+                }
+
+                System.out.println(" Masukkan elemen matriks kedua : ");
+                for (i = 0; i < m; i++) {
+                    for (j = 0; j < n; j++) {
+                        matrix2[i][j] = scan.nextInt();
+                    }
+                }
+
+                System.out.println(" Hasil penjumlahan matrix : ");
+                for (i = 0; i < m; i++) {
+                    for (j = 0; j < n; j++) {
+                        hasil[i][j] = matrix1[i][j] + matrix2[i][j];
+                        System.out.println(hasil[i][j] + "\t");
+                    }
+                }
+                break;
+
+
+            case 2:
+                scan = new Scanner(System.in);
+                System.out.println(" Masukkan baris matrix : ");
+                m = scan.nextInt();
+                System.out.println(" Masukkan kolom matrix : ");
+                n = scan.nextInt();
+
+                System.out.println(" Masukkan elemen matriks pertama : ");
+                for (i = 0; i < m; i++) {
+                    for (j = 0; j < n; j++) {
+                        matrix1[i][j] = scan.nextInt();
+                    }
+                }
+
+                System.out.println(" Masukkan elemen matriks kedua : ");
+                for (i = 0; i < m; i++) {
+                    for (j = 0; j < n; j++) {
+                        matrix2[i][j] = scan.nextInt();
+                    }
+                }
+
+                System.out.println(" Hasil pengurangan matrix : ");
+                for (i = 0; i < m; i++) {
+                    for (j = 0; j < n; j++) {
+                        hasil[i][j] = matrix1[i][j] - matrix2[i][j];
+                        System.out.println(hasil[i][j] + "\t");
+                    }
+                }
+                break;
+
+
+            case 3:
+                BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+                int[][] matrixx = new int[2][2];
+                System.out.println(" Masukkan elemen matrix : ");
+                for (int ii = 0; ii < 2; ii++) {
+                    for (int jj = 0; jj < 2; jj++) {
+                        System.out.println(" Elemen [ " + (ii + 1) + "," + (jj + 1) + " ] = ");
+                        matrixx[ii][jj] = Integer.parseInt(input.readLine());
+                    }
+                }
+
+                System.out.println(" \n Matrix nya : \n ");
+
+                for (int ii = 0; ii < 2; ii++) {
+                    System.out.println("|");
+                    for (int jj = 0; jj < 2; jj++) {
+                        System.out.println(matrixx[ii][jj] + "");
+                    }
+                    System.out.println("|");
+                }
+
+                int determinan = (matrixx[0][0] * matrixx[1][1]) - (matrixx[0][1] * matrixx[1][0]);
+
+                System.out.println(" \n Determinan Matrix : " + determinan);
+                temp = matrixx[0][0];
+                matrixx[0][0] = matrixx[1][1];
+                matrixx[1][1] = temp;
+                matrixx[0][1] = matrixx[0][1];
+                matrixx[1][0] = matrixx[1][0];
+
+                System.out.println(" \n Matrix Adjoin : ");
+                for (int ii = 0; ii < 2; ii++) {
+                    System.out.println("|");
+                }
+                for (int jj = 0; jj < 2; jj++) {
+                    int ii = 0;
+                    System.out.println(matrixx[ii][jj] + "");
+                }
+                System.out.println("|");
+
+                System.out.println(" Matrix Invers : \n ");
+                for (int ii = 0; ii < 2; ii++) {
+                    int jj = 0;
+                    System.out.println(matrixx[ii][jj] + "/" + determinan + "");
+                    System.out.println("|");
+                }
+                break;
+
+
+            case 4:
+                scan = new Scanner(System.in);
+                System.out.println(" Masukkan baris matrix : ");
+                m = scan.nextInt();
+                System.out.println(" Masukkan kolom matrix : ");
+                n = scan.nextInt();
+
+                System.out.println(" Masukkan elemen matriks pertama : ");
+                for (i = 0; i < m; i++) {
+                    for (j = 0; j < n; j++) {
+                        matrix1[i][j] = scan.nextInt();
+                    }
+                }
+
+                System.out.println(" Masukkan elemen matriks kedua : ");
+                for (i = 0; i < m; i++) {
+                    for (j = 0; j < n; j++) {
+                        matrix2[i][j] = scan.nextInt();
+                    }
+                }
+
+                System.out.println(" Hasil transpose matrix : ");
+                for (i = 0; i < m; i++) {
+                    for (j = 0; j < n; j++) {
+                        System.out.println(transpose[i][j] + "\t");
+                    }
+                }
+                break;
+
+
+            default:
+                System.out.println(" Menu yang anda pilih tidak ada !!! ");
+                break;
+        }
+    }
+}
